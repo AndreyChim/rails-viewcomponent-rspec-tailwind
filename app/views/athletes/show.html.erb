@@ -1,3 +1,15 @@
+<div class="mb-2">
+  <div class="mb-1">
+    <%= render BackNavigationComponent.new(
+          href: team_path(@athlete.team),
+          text: "team"
+    ) %>
+  </div>
+  <%= render PageHeaderComponent.new do %>
+    <%= render PageTitleComponent.new(title: "Player details") %>
+  <% end %>
+</div>
+
 <div class="mb-1">
   <%= link_to team_path(@athlete.team) do %>
     <div class="flex items-center space-x-1 text-gray-600 transition duration-300 border-b border-white max-w-fit hover:border-b hover:border-gray-400">

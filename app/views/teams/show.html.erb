@@ -1,6 +1,12 @@
 <div class="mb-2">
   <%= render PageHeaderComponent.new do %>
     <div class="mb-1">
+    <%= render BackNavigationComponent.new(
+          href: teams_path,
+          text: "teams"
+    ) %>
+    </div>
+    <div class="mb-1">
       <%= render PageTitleComponent.new(title: @team.name) %>
     </div>
     <div class="flex space-x-3">
